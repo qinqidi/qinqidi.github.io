@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>可填写版-小区物业系统部署调查表</title>
+    <style>
+        body { font-family: '微软雅黑', sans-serif; margin: 20px; }
+        h2 { text-align: center; }
+        table { width: 100%; border-collapse: collapse; font-size: 12px; }
+        th, td { border: 1px solid #333; padding: 8px 6px; vertical-align: top; }
+        th { background-color: #f0f0f0; font-weight: bold; text-align: center; }
+        td:nth-child(1) { text-align: center; width: 36px; }
+        td:nth-child(2) { width: 90px; }
+        td:nth-child(3) { width: 170px; }
+        td:nth-child(4) { width: 240px; }
+        td:nth-child(5) { width: 180px; }
+        input[type="text"] { width: 90%; border: 0; border-bottom: 1px dashed #888; outline: none; font-size: 12px; padding: 2px; background: transparent; }
+        input[type="checkbox"] { margin-right: 3px; vertical-align: middle; }
+        .checkbox-group { display: inline-block; margin-right: 8px; white-space: nowrap; }
+        .section-header { background-color: #e6f3ff !important; font-weight: bold; text-align: center; }
+        .note { color: #555; font-size: 11px; margin-top: 15px; }
+    </style>
+</head>
+<body>
+    <h2>住宅小区智慧物业管理平台部署综合调查表</h2>
+    <p style="text-align:center;">
+        项目名称：<input type="text" style="width:180px;"/> &nbsp;&nbsp; 
+        填表日期：<input type="text" style="width:100px;" placeholder="202_年__月__日"/> &nbsp;&nbsp; 
+        填表人：<input type="text" style="width:120px;"/>
+    </p>
+    
+    <table>
+        <tr><th>序号</th><th>调查模块</th><th>调查细项</th><th>填写内容/选项（请点击勾选或输入）</th><th>现状记录（补充说明）</th></tr>
+        
+        <!-- 第一部分 -->
+        <tr class="section-header"><td colspan="5">第一部分：小区基本信息与房产建筑</td></tr>
+        <tr><td>1</td><td>基础信息</td><td>项目名称与详细地址</td><td><input type="text" placeholder="请输入名称及门牌号"/></td><td><input type="text"/></td></tr>
+        <tr><td>2</td><td>基础信息</td><td>开发建设单位/竣工交付年份</td><td><input type="text" placeholder="单位全称、年份"/></td><td><input type="text"/></td></tr>
+        <tr><td>3</td><td>基础信息</td><td>占地面积/建筑面积/绿化率</td><td><input type="text" placeholder="___㎡ / ___㎡ / ___%"/></td><td><input type="text"/></td></tr>
+        <tr><td>4</td><td>基础信息</td><td>当前物业服务企业全称</td><td><input type="text" placeholder="公司全称"/></td><td><input type="text"/></td></tr>
+        <tr><td>5</td><td>房产资源</td><td>总户数（住宅/商铺）</td><td>住宅<input type="text" style="width:50px;" placeholder="户"/> / 商铺<input type="text" style="width:50px;" placeholder="户"/></td><td><input type="text"/></td></tr>
+        <tr><td>6</td><td>房产资源</td><td>楼栋数量与类型</td><td>总<input type="text" style="width:40px;"/>栋；高层<input type="text" style="width:40px;"/>栋、小高层<input type="text" style="width:40px;"/>栋、多层<input type="text" style="width:40px;"/>栋、别墅<input type="text" style="width:40px;"/>栋</td><td><input type="text"/></td></tr>
+        <tr><td>7</td><td>房产资源</td><td>房屋产权性质分类数量</td><td>商品房<input type="text" style="width:50px;"/>户、公租房<input type="text" style="width:50px;"/>户、回迁房<input type="text" style="width:50px;"/>户、其他<input type="text" style="width:50px;"/></td><td><input type="text"/></td></tr>
+        <tr><td>8</td><td>房产资源</td><td>当前交付率/入住率/空置率</td><td><input type="text" style="width:50px;"/>% / <input type="text" style="width:50px;"/>% / <input type="text" style="width:50px;"/>%</td><td><input type="text"/></td></tr>
+        <tr><td>9</td><td>房产资源</td><td>房屋面积与户型数据是否齐全</td><td><span class="checkbox-group"><input type="checkbox" id="q9_1"><label for="q9_1">齐全</label></span> <span class="checkbox-group"><input type="checkbox" id="q9_2"><label for="q9_2">缺失（约<input type="text" style="width:40px;"/>%）</label></span></td><td><input type="text"/></td></tr>
+        <tr><td>10</td><td>房产资源</td><td>物业用房及公建配套面积</td><td>办公<input type="text" style="width:50px;"/>㎡、宿舍<input type="text" style="width:50px;"/>㎡、社区中心<input type="text" style="width:50px;"/>㎡、其他<input type="text" style="width:50px;"/>㎡</td><td><input type="text"/></td></tr>
+
+        <!-- 第二部分 -->
+        <tr class="section-header"><td colspan="5">第二部分：设施设备清单与运行状态</td></tr>
+        <tr><td>11</td><td>供配电</td><td>专用配电室/变压器/发电机</td><td>配电室<input type="text" style="width:40px;"/>间、变压器<input type="text" style="width:40px;"/>台；发电机 <span class="checkbox-group"><input type="checkbox">有<input type="text" style="width:40px;"/>台</span> <span class="checkbox-group"><input type="checkbox">无</span></td><td><input type="text"/></td></tr>
+        <tr><td>12</td><td>供配电</td><td>公共照明及智能控制</td><td>路灯<input type="text" style="width:40px;"/>盏、楼道灯<input type="text" style="width:40px;"/>盏；智能照明 <span class="checkbox-group"><input type="checkbox">有</span> <span class="checkbox-group"><input type="checkbox">无</span></td><td><input type="text"/></td></tr>
+        <tr><td>13</td><td>供配电</td><td>新能源充电桩</td><td><span class="checkbox-group"><input type="checkbox">无</span> <span class="checkbox-group"><input type="checkbox">有（直流快充<input type="text" style="width:40px;"/>个，交流慢充<input type="text" style="width:40px;"/>个）接入平台：<input type="text" style="width:80px;"/></span></td><td><input type="text"/></td></tr>
+        <tr><td>14</td><td>给排水</td><td>供水方式</td><td><span class="checkbox-group"><input type="checkbox">市政直供</span> <span class="checkbox-group"><input type="checkbox">变频水泵（<input type="text" style="width:30px;"/>台，品牌<input type="text" style="width:60px;"/>）</span> <span class="checkbox-group"><input type="checkbox">楼顶水箱（<input type="text" style="width:40px;"/>m³）</span></td><td><input type="text"/></td></tr>
+        <tr><td>15</td><td>给排水</td><td>二次供水是否移交</td><td><span class="checkbox-group"><input type="checkbox">已移交</span> <span class="checkbox-group"><input type="checkbox">物业维护</span></td><td><input type="text"/></td></tr>
+        <tr><td>16</td><td>给排水</td><td>化粪池/隔油池/管网</td><td>化粪池<input type="text" style="width:40px;"/>座、隔油池<input type="text" style="width:40px;"/>座、主管道约<input type="text" style="width:50px;"/>米</td><td><input type="text"/></td></tr>
+        <tr><td>17</td><td>给排水</td><td>排水泵及远程监测</td><td>污水泵<input type="text" style="width:40px;"/>台，雨水泵<input type="text" style="width:40px;"/>台；远程监测 <span class="checkbox-group"><input type="checkbox">有</span> <span class="checkbox-group"><input type="checkbox">无</span></td><td><input type="text"/></td></tr>
+        <tr><td>18</td><td>消防</td><td>消防控制室与值班</td><td><span class="checkbox-group"><input type="checkbox">有（<input type="text" style="width:40px;"/>人，<input type="text" style="width:40px;"/>小时值班）</span> <span class="checkbox-group"><input type="checkbox">无</span></td><td><input type="text"/></td></tr>
+        <tr><td>19</td><td>消防</td><td>报警主机品牌/型号</td><td><input type="text" placeholder="品牌型号"/></td><td><input type="text"/></td></tr>
+        <tr><td>20</td><td>消防</td><td>前端探头数量</td><td>烟感<input type="text" style="width:50px;"/>个、温感<input type="text" style="width:50px;"/>个、手报<input type="text" style="width:50px;"/>个</td><td><input type="text"/></td></tr>
+        <tr><td>21</td><td>消防</td><td>灭火设施数量</td><td>消火栓<input type="text" style="width:50px;"/>个、灭火器<input type="text" style="width:50px;"/>具（最近充装：<input type="text" style="width:80px;"/>）、喷淋头<input type="text" style="width:50px;"/>个</td><td><input type="text"/></td></tr>
+        <tr><td>22</td><td>消防</td><td>消防水箱/水池</td><td><span class="checkbox-group"><input type="checkbox">有（<input type="text" style="width:50px;"/>m³）</span> <span class="checkbox-group"><input type="checkbox">无</span></td><td><input type="text"/></td></tr>
+        <tr><td>23</td><td>消防</td><td>防排烟风机数量</td><td>排烟风机<input type="text" style="width:50px;"/>台、正压送风机<input type="text" style="width:50px;"/>台</td><td><input type="text"/></td></tr>
+        <tr><td>24</td><td>消防</td><td>消防物联网接入情况</td><td><span class="checkbox-group"><input type="checkbox">已接入（平台<input type="text" style="width:100px;"/>）</span> <span class="checkbox-group"><input type="checkbox">未接入</span></td><td><input type="text"/></td></tr>
+        <tr><td>25</td><td>消防</td><td>重大隐患自查</td><td><span class="checkbox-group"><input type="checkbox">无</span> <span class="checkbox-group"><input type="checkbox">有（管网无水、系统瘫痪等，请注明：<input type="text" style="width:120px;"/>）</span></td><td><input type="text"/></td></tr>
+        <tr><td>26</td><td>电梯</td><td>电梯总数/品牌载重</td><td><input type="text" style="width:50px;"/>部；品牌<input type="text" style="width:80px;"/>，载重<input type="text" style="width:50px;"/>kg</td><td><input type="text"/></td></tr>
+        <tr><td>27</td><td>电梯</td><td>类型分布</td><td>客梯<input type="text" style="width:40px;"/>部、货梯<input type="text" style="width:40px;"/>部、消防梯<input type="text" style="width:40px;"/>部</td><td><input type="text"/></td></tr>
+        <tr><td>28</td><td>电梯</td><td>已使用年限</td><td><span class="checkbox-group"><input type="checkbox">0-3年</span> <span class="checkbox-group"><input type="checkbox">3-5年</span> <span class="checkbox-group"><input type="checkbox">5-10年</span> <span class="checkbox-group"><input type="checkbox">10年以上</span></td><td><input type="text"/></td></tr>
+        <tr><td>29</td><td>电梯</td><td>电动车阻车系统</td><td><span class="checkbox-group"><input type="checkbox">已装（<input type="text" style="width:40px;"/>套）</span> <span class="checkbox-group"><input type="checkbox">未装</span></td><td><input type="text"/></td></tr>
+        <tr><td>30</td><td>电梯</td><td>维保方式</td><td><span class="checkbox-group"><input type="checkbox">原厂</span> <span class="checkbox-group"><input type="checkbox">第三方（公司名<input type="text" style="width:100px;"/>）</span></td><td><input type="text"/></td></tr>
+        <tr><td>31</td><td>电梯</td><td>电梯运行远程监测</td><td><span class="checkbox-group"><input type="checkbox">有</span> <span class="checkbox-group"><input type="checkbox">无</span></td><td><input type="text"/></td></tr>
+        <tr><td>32</td><td>弱电监控</td><td>摄像头总数/品牌/清晰度</td><td>总数<input type="text" style="width:50px;"/>个；品牌<input type="text" style="width:80px;"/>；<span class="checkbox-group"><input type="checkbox">普通</span> <span class="checkbox-group"><input type="checkbox">全高清</span> <span class="checkbox-group"><input type="checkbox">4K</span></td><td><input type="text"/></td></tr>
+        <tr><td>33</td><td>弱电监控</td><td>监控覆盖区域</td><td><span class="checkbox-group"><input type="checkbox">出入口</span> <span class="checkbox-group"><input type="checkbox">主干道</span> <span class="checkbox-group"><input type="checkbox">电梯轿厢</span> <span class="checkbox-group"><input type="checkbox">单元门厅</span> <span class="checkbox-group"><input type="checkbox">停车场</span></td><td><input type="text"/></td></tr>
+        <tr><td>34</td><td>弱电监控</td><td>门禁系统方式</td><td><span class="checkbox-group"><input type="checkbox">刷卡</span> <span class="checkbox-group"><input type="checkbox">人脸</span> <span class="checkbox-group"><input type="checkbox">密码</span> <span class="checkbox-group"><input type="checkbox">手机APP/小程序</span></td><td><input type="text"/></td></tr>
+        <tr><td>35</td><td>弱电监控</td><td>楼宇可视对讲品牌/状态</td><td>品牌<input type="text" style="width:80px;"/>；<span class="checkbox-group"><input type="checkbox">正常</span> <span class="checkbox-group"><input type="checkbox">部分故障(<input type="text" style="width:40px;"/>户)</span> <span class="checkbox-group"><input type="checkbox">瘫痪</span></td><td><input type="text"/></td></tr>
+        <tr><td>36</td><td>弱电监控</td><td>周界防范系统</td><td><span class="checkbox-group"><input type="checkbox">红外对射</span> <span class="checkbox-group"><input type="checkbox">电子围栏</span> <span class="checkbox-group"><input type="checkbox">震动光缆（<input type="text" style="width:50px;"/>米）</span> <span class="checkbox-group"><input type="checkbox">无</span></td><td><input type="text"/></td></tr>
+        <tr><td>37</td><td>弱电监控</td><td>电子巡更系统</td><td><span class="checkbox-group"><input type="checkbox">离线巡更棒</span> <span class="checkbox-group"><input type="checkbox">二维码</span> <span class="checkbox-group"><input type="checkbox">NFC</span> <span class="checkbox-group"><input type="checkbox">无</span></td><td><input type="text"/></td></tr>
+        <tr><td>38</td><td>弱电监控</td><td>高空抛物监测</td><td><span class="checkbox-group"><input type="checkbox">有（<input type="text" style="width:40px;"/>个，覆盖<input type="text" style="width:40px;"/>栋）</span> <span class="checkbox-group"><input type="checkbox">无</span></td><td><input type="text"/></td></tr>
+        <tr><td>39</td><td>弱电监控</td><td>智能快递柜/弱电机房</td><td>快递柜<span class="checkbox-group"><input type="checkbox">有（<input type="text" style="width:30px;"/>组）</span> <span class="checkbox-group"><input type="checkbox">无</span>；机房温控 <span class="checkbox-group"><input type="checkbox">到位</span> <span class="checkbox-group"><input type="checkbox">不到位</span></td><td><input type="text"/></td></tr>
+        <tr><td>40</td><td>暖通其他</td><td>中央空调/供暖系统</td><td>空调<span class="checkbox-group"><input type="checkbox">有</span><span class="checkbox-group"><input type="checkbox">无</span>；供暖<span class="checkbox-group"><input type="checkbox">市政集中</span> <span class="checkbox-group"><input type="checkbox">自建锅炉</span> <span class="checkbox-group"><input type="checkbox">分户采暖</span></td><td><input type="text"/></td></tr>
+        <tr><td>41</td><td>暖通其他</td><td>公共广播/背景音乐</td><td>覆盖区域<input type="text" style="width:120px;"/>；是否正常 <span class="checkbox-group"><input type="checkbox">是</span> <span class="checkbox-group"><input type="checkbox">否</span></td><td><input type="text"/></td></tr>
+
+        <!-- 第三部分：人员 -->
+        <tr class="section-header"><td colspan="5">第三部分：人员档案与组织管理</td></tr>
+        <tr><td>42</td><td>业主画像</td><td>业主年龄结构粗略占比</td><td>老年约<input type="text" style="width:50px;"/>%、中年约<input type="text" style="width:50px;"/>%、青年约<input type="text" style="width:50px;"/>%</td><td><input type="text"/></td></tr>
+        <tr><td>43</td><td>业主画像</td><td>出租情况及户数</td><td>出租率约<input type="text" style="width:50px;"/>%（涉及<input type="text" style="width:50px;"/>户）</td><td><input type="text"/></td></tr>
+        <tr><td>44</td><td>业主画像</td><td>重点关怀对象建档</td><td><span class="checkbox-group"><input type="checkbox">已建立（<input type="text" style="width:50px;"/>人）</span> <span class="checkbox-group"><input type="checkbox">未建立</span></td><td><input type="text"/></td></tr>
+        <tr><td>45</td><td>业主画像</td><td>业主信息化接受程度</td><td><span class="checkbox-group"><input type="checkbox">大部分能</span> <span class="checkbox-group"><input type="checkbox">仅一半能</span> <span class="checkbox-group"><input type="checkbox">较少人能</span></td><td><input type="text"/></td></tr>
+        <tr><td>46</td><td>物业团队</td><td>当前编制人数</td><td>项目经理<input type="text" style="width:40px;"/>人、客服<input type="text" style="width:40px;"/>人、维修<input type="text" style="width:40px;"/>人、安保<input type="text" style="width:40px;"/>人、保洁<input type="text" style="width:40px;"/>人、绿化<input type="text" style="width:40px;"/>人、财务<input type="text" style="width:40px;"/>人</td><td><input type="text"/></td></tr>
+        <tr><td>47</td><td>物业团队</td><td>缺编情况</td><td>缺编<input type="text" style="width:40px;"/>人，主要在<input type="text" style="width:100px;"/>岗位</td><td><input type="text"/></td></tr>
+        <tr><td>48</td><td>物业团队</td><td>一线员工平均年龄/持证</td><td>平均<input type="text" style="width:40px;"/>岁；持有特种作业证<input type="text" style="width:40px;"/>人</td><td><input type="text"/></td></tr>
+        <tr><td>49</td><td>物业团队</td><td>当前考勤方式</td><td><span class="checkbox-group"><input type="checkbox">纸质</span> <span class="checkbox-group"><input type="checkbox">指纹</span> <span class="checkbox-group"><input type="checkbox">人脸</span> <span class="checkbox-group"><input type="checkbox">APP定位打卡</span></td><td><input type="text"/></td></tr>
+        <tr><td>50</td><td>物业团队</td><td>是否需要分级权限</td><td><span class="checkbox-group"><input type="checkbox">是</span> <span class="checkbox-group"><input type="checkbox">否</span></td><td><input type="text"/></td></tr>
+
+        <!-- 第四部分：服务、报修与收费 -->
+        <tr class="section-header"><td colspan="5">第四部分：服务、报修与收费</td></tr>
+        <tr><td>51</td><td>报修投诉</td><td>日均接报修/投诉量</td><td>约<input type="text" style="width:60px;"/>单</td><td><input type="text"/></td></tr>
+        <tr><td>52</td><td>报修投诉</td><td>目前报修渠道</td><td><span class="checkbox-group"><input type="checkbox">电话</span> <span class="checkbox-group"><input type="checkbox">微信群</span> <span class="checkbox-group"><input type="checkbox">前台登记</span> <span class="checkbox-group"><input type="checkbox">公众号/APP</span></td><td><input type="text"/></td></tr>
+        <tr><td>53</td><td>报修投诉</td><td>希望实现工单全流程闭环</td><td><span class="checkbox-group"><input type="checkbox">是</span> <span class="checkbox-group"><input type="checkbox">否</span></td><td><input type="text"/></td></tr>
+        <tr><td>54</td><td>收费账务</td><td>目前记账方式</td><td><span class="checkbox-group"><input type="checkbox">Excel</span> <span class="checkbox-group"><input type="checkbox">单机软件</span> <span class="checkbox-group"><input type="checkbox">网络财务系统</span></td><td><input type="text"/></td></tr>
+        <tr><td>55</td><td>收费账务</td><td>主要收费项目</td><td><span class="checkbox-group"><input type="checkbox">物业费</span> <span class="checkbox-group"><input type="checkbox">车位费</span> <span class="checkbox-group"><input type="checkbox">水/电费</span> <span class="checkbox-group"><input type="checkbox">垃圾费</span> <span class="checkbox-group"><input type="checkbox">维修基金</span> <span class="checkbox-group"><input type="checkbox">其他</span></td><td><input type="text"/></td></tr>
+        <tr><td>56</td><td>收费账务</td><td>上年度收缴率/欠费情况</td><td>收缴率<input type="text" style="width:50px;"/>%；欠费超1年约<input type="text" style="width:50px;"/>户、金额<input type="text" style="width:60px;"/>万元</td><td><input type="text"/></td></tr>
+        <tr><td>57</td><td>收费账务</td><td>支付与开票需求</td><td><span class="checkbox-group"><input type="checkbox">线上支付</span> <span class="checkbox-group"><input type="checkbox">电子发票</span> <span class="checkbox-group"><input type="checkbox">自动计算滞纳金</span></td><td><input type="text"/></td></tr>
+        <tr><td>58</td><td>收费账务</td><td>公共收益管理</td><td><span class="checkbox-group"><input type="checkbox">单独立账</span> <span class="checkbox-group"><input type="checkbox">未独立</span>；年收益约<input type="text" style="width:70px;"/>元</td><td><input type="text"/></td></tr>
+
+        <!-- 第五部分 -->
+        <tr class="section-header"><td colspan="5">第五部分：安保、环境与专项管理</td></tr>
+        <tr><td>59</td><td>车辆管理</td><td>车位数及位置</td><td>地上<input type="text" style="width:50px;"/>个、地下<input type="text" style="width:50px;"/>个</td><td><input type="text"/></td></tr>
+        <tr><td>60</td><td>车辆管理</td><td>车辆识别系统</td><td><span class="checkbox-group"><input type="checkbox">高清车牌</span> <span class="checkbox-group"><input type="checkbox">蓝牙</span> <span class="checkbox-group"><input type="checkbox">人工抬杆</span> <span class="checkbox-group"><input type="checkbox">无管控</span></td><td><input type="text"/></td></tr>
+        <tr><td>61</td><td>车辆管理</td><td>车辆管理痛点</td><td><span class="checkbox-group"><input type="checkbox">外来车占用</span> <span class="checkbox-group"><input type="checkbox">非机动车乱停</span> <span class="checkbox-group"><input type="checkbox">充电桩不足</span></td><td><input type="text"/></td></tr>
+        <tr><td>62</td><td>环境仓库</td><td>业务外包情况</td><td><span class="checkbox-group"><input type="checkbox">保洁外包</span> <span class="checkbox-group"><input type="checkbox">绿化外包</span> <span class="checkbox-group"><input type="checkbox">保安外包</span> <span class="checkbox-group"><input type="checkbox">全部自管</span></td><td><input type="text"/></td></tr>
+        <tr><td>63</td><td>环境仓库</td><td>竣工图纸资料电子化</td><td><span class="checkbox-group"><input type="checkbox">齐全，已有电子化<input type="text" style="width:40px;"/>%</span> <span class="checkbox-group"><input type="checkbox">不齐全</span></td><td><input type="text"/></td></tr>
+        <tr><td>64</td><td>环境仓库</td><td>仓库备件管理</td><td><span class="checkbox-group"><input type="checkbox">有手工记录</span> <span class="checkbox-group"><input type="checkbox">无任何记录</span></td><td><input type="text"/></td></tr>
+        <tr><td>65</td><td>增值服务</td><td>是否需要家政等增值模块</td><td><span class="checkbox-group"><input type="checkbox">是</span> <span class="checkbox-group"><input type="checkbox">否</span></td><td><input type="text"/></td></tr>
+        <tr><td>66</td><td>增值服务</td><td>当前通知公告发布渠道</td><td><span class="checkbox-group"><input type="checkbox">纸质张贴</span> <span class="checkbox-group"><input type="checkbox">微信群</span> <span class="checkbox-group"><input type="checkbox">短信</span></td><td><input type="text"/></td></tr>
+
+        <!-- 第六部分 -->
+        <tr class="section-header"><td colspan="5">第六部分：补充与集成需求</td></tr>
+        <tr><td>67</td><td>系统对接</td><td>各品牌型号提供（电梯、消防、门禁、道闸）</td><td><input type="text" placeholder="请尽可能详细列出"/></td><td><input type="text"/></td></tr>
+        <tr><td>68</td><td>系统对接</td><td>政府数据上报要求</td><td><span class="checkbox-group"><input type="checkbox">有（请说明<input type="text" style="width:120px;"/>）</span> <span class="checkbox-group"><input type="checkbox">暂无</span></td><td><input type="text"/></td></tr>
+        <tr><td>69</td><td>系统对接</td><td>是否需要商城或团购功能</td><td><span class="checkbox-group"><input type="checkbox">是</span> <span class="checkbox-group"><input type="checkbox">否</span></td><td><input type="text"/></td></tr>
+        <tr><td>70</td><td>痛点排序</td><td>当前最大痛点（可多选）</td><td><span class="checkbox-group"><input type="checkbox">收费难</span> <span class="checkbox-group"><input type="checkbox">设备故障多派单乱</span> <span class="checkbox-group"><input type="checkbox">投诉多难闭环</span> <span class="checkbox-group"><input type="checkbox">人车杂乱安全隐患</span> <span class="checkbox-group"><input type="checkbox">账目混乱收益不透明</span> <span class="checkbox-group"><input type="checkbox">员工考核无抓手</span></td><td><input type="text"/></td></tr>
+    </table>
+    <p class="note">✅ 本版为可填写电子版，点击复选框即可打钩，横线处可直接打字。用 Word 打开后另存为 .docx 即可保存填写结果。</p>
+</body>
+</html>
